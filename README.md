@@ -1,8 +1,6 @@
 # Quotes API Tech Test 
 
-
-
-We want you to implement a REST API that, given a famous person and a count N, returns N quotes from this famous person _shouted_ .
+This is an implb ementation of a REST API that, given a famous person and a count N, returns N quotes from this famous person _shouted_ .
 
 Shouting a quote consists of transforming it to uppercase and adding an exclamation mark at the end. 
 
@@ -29,7 +27,16 @@ curl -s http://awesomequotesapi.com/shout/steve-jobs?limit=2
 ## Constraints 
 - Count N provided MUST be equal or less than 10. If not, our API should return an error.
 
-## What will we evaluate?
-* **Design**: We know this is a very simple application but we want to see how you design code. We value having a clear application architecture, that helps maintain it (and make changes requested by the product owner) for years.
-* **Testing**: We love automated testing and we love reliable tests. We like testing for two reasons: First, good tests let us deploy to production without fear (even on a Friday!). Second, tests give a fast feedback cycle so developers in dev phase know if their changes are breaking anything.
-* **Simplicity**: If our product owner asks us for the same application but accessed by command line (instead of the http server) it should be super easy to bring to life!
+## Installation
+
+- Run the "composer install" command
+- Setup the web document root to public/ folder
+- Run http://.../shout.php?id=steve-jobs&limit=2 in browser or using curl on command line
+
+## Tests
+
+Run tests using the following command:
+
+"./vendor/bin/phpunit --testdox"
+
+after you have installed phpunit through composer
